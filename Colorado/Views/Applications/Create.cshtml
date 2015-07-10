@@ -33,17 +33,23 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.certificate_id, "certificate_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("certificate_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.certificate_id, "", new { @class = "text-danger" })
+            <div class="col-md-4">
+                @Html.DropDownList("certificate_id", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.certificate_id, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-md-6">
+                @Html.ActionLink("Create new", "Create", "Certificates")
             </div>
         </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.analyzer_id, "analyzer_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("analyzer_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.analyzer_id, "", new { @class = "text-danger" })
+            <div class="col-md-4">
+                @Html.DropDownList("analyzer_id", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.analyzer_id, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-md-6">
+                @Html.ActionLink("Create new", "Create", "Analyzers")
             </div>
         </div>
 
