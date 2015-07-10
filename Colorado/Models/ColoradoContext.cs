@@ -17,6 +17,8 @@ namespace Colorado.Models
         }
 
         public DbSet<Analyzer> Analyzers { get; set; }
+        public DbSet<Certificate> Certificates { get; set; }
+        public DbSet<Application> Applications { get; set; } 
     
     }
 }

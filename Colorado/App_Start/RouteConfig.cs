@@ -16,7 +16,7 @@ namespace Colorado
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Analyzers", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Applications", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
