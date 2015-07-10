@@ -1,0 +1,34 @@
+﻿@model Colorado.Models.Port
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Port</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.greater_or_equal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.greater_or_equal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.less_or_equal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.less_or_equal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

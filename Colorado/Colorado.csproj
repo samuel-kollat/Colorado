@@ -173,9 +173,11 @@
     <Compile Include="Controllers\AnalyzersController.cs" />
     <Compile Include="Controllers\ApplicationsController.cs" />
     <Compile Include="Controllers\CertificatesController.cs" />
+    <Compile Include="Controllers\FiltersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NbarProtocolsController.cs" />
+    <Compile Include="Controllers\PortsController.cs" />
     <Compile Include="Controllers\RoutersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -185,9 +187,11 @@
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\ColoradoContext.cs" />
+    <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NbarProtocol.cs" />
+    <Compile Include="Models\Port.cs" />
     <Compile Include="Models\Router.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -270,6 +274,16 @@
     <Content Include="Views\Routers\Details.cshtml" />
     <Content Include="Views\Routers\Edit.cshtml" />
     <Content Include="Views\Routers\Index.cshtml" />
+    <Content Include="Views\Ports\Create.cshtml" />
+    <Content Include="Views\Ports\Delete.cshtml" />
+    <Content Include="Views\Ports\Details.cshtml" />
+    <Content Include="Views\Ports\Edit.cshtml" />
+    <Content Include="Views\Ports\Index.cshtml" />
+    <Content Include="Views\Filters\Create.cshtml" />
+    <Content Include="Views\Filters\Delete.cshtml" />
+    <Content Include="Views\Filters\Details.cshtml" />
+    <Content Include="Views\Filters\Edit.cshtml" />
+    <Content Include="Views\Filters\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
