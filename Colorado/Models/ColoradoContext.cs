@@ -23,6 +23,8 @@ namespace Colorado.Models
         public DbSet<Router> Routers { get; set; }
         public DbSet<Port> Ports { get; set; }
         public DbSet<Filter> Filters { get; set; }
+        public DbSet<IpNetwork> IpNetworks { get; set; }
+        public DbSet<AccessList> AccessLists { get; set; }
     
     }
 }

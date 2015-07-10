@@ -1,0 +1,90 @@
+﻿@model Colorado.Models.AccessList
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AccessList</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Filter.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Filter.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IpDestination.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IpDestination.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IpSource.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IpSource.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PortDestination.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PortDestination.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PortSource.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PortSource.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.action)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.action)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.protocol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.protocol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ttl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ttl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

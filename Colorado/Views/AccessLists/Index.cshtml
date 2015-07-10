@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Colorado.Models.AccessList>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Filter.name)
+        </th>
+        <th>
+            Source IP
+        </th>
+        <th>
+            Destination IP
+        </th>
+        <th>
+            Source Port
+        </th>
+        <th>
+            Destination Port
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.action)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.protocol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ttl)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Filter.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IpSource.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IpDestination.address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PortSource.greater_or_equal) - @Html.DisplayFor(modelItem => item.PortSource.less_or_equal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PortDestination.greater_or_equal) - @Html.DisplayFor(modelItem => item.PortDestination.less_or_equal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.action)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.protocol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ttl)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

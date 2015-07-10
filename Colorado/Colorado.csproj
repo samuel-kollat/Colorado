@@ -169,12 +169,14 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccessListsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AnalyzersController.cs" />
     <Compile Include="Controllers\ApplicationsController.cs" />
     <Compile Include="Controllers\CertificatesController.cs" />
     <Compile Include="Controllers\FiltersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IpNetworksController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NbarProtocolsController.cs" />
     <Compile Include="Controllers\PortsController.cs" />
@@ -182,6 +184,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccessList.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Analyzer.cs" />
     <Compile Include="Models\Application.cs" />
@@ -189,6 +192,7 @@
     <Compile Include="Models\ColoradoContext.cs" />
     <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IpNetwork.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\NbarProtocol.cs" />
     <Compile Include="Models\Port.cs" />
@@ -284,6 +288,16 @@
     <Content Include="Views\Filters\Details.cshtml" />
     <Content Include="Views\Filters\Edit.cshtml" />
     <Content Include="Views\Filters\Index.cshtml" />
+    <Content Include="Views\IpNetworks\Create.cshtml" />
+    <Content Include="Views\IpNetworks\Delete.cshtml" />
+    <Content Include="Views\IpNetworks\Details.cshtml" />
+    <Content Include="Views\IpNetworks\Edit.cshtml" />
+    <Content Include="Views\IpNetworks\Index.cshtml" />
+    <Content Include="Views\AccessLists\Create.cshtml" />
+    <Content Include="Views\AccessLists\Delete.cshtml" />
+    <Content Include="Views\AccessLists\Details.cshtml" />
+    <Content Include="Views\AccessLists\Edit.cshtml" />
+    <Content Include="Views\AccessLists\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

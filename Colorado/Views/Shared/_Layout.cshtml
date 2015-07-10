@@ -28,7 +28,8 @@
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Filtering<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Filters", "Index", "Filters")</li>
-                            <li><a href="#">ACLs</a></li>
+                            <li>@Html.ActionLink("ACLs", "Index", "AccessLists")</li>
+                            <li>@Html.ActionLink("IP addresses", "Index", "IpNetworks")</li>
                             <li>@Html.ActionLink("Ports", "Index", "Ports")</li>
                         </ul>
                     </li>
