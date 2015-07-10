@@ -18,7 +18,9 @@ namespace Colorado.Models
 
         public DbSet<Analyzer> Analyzers { get; set; }
         public DbSet<Certificate> Certificates { get; set; }
-        public DbSet<Application> Applications { get; set; } 
+        public DbSet<Application> Applications { get; set; }
+        public DbSet<NbarProtocol> NbarProtocols { get; set; }
+        public DbSet<Router> Routers { get; set; }
     
     }
 }

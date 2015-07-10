@@ -175,6 +175,8 @@
     <Compile Include="Controllers\CertificatesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NbarProtocolsController.cs" />
+    <Compile Include="Controllers\RoutersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +187,8 @@
     <Compile Include="Models\ColoradoContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\NbarProtocol.cs" />
+    <Compile Include="Models\Router.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -256,6 +260,16 @@
     <Content Include="Views\Certificates\Details.cshtml" />
     <Content Include="Views\Certificates\Edit.cshtml" />
     <Content Include="Views\Certificates\Index.cshtml" />
+    <Content Include="Views\NbarProtocols\Create.cshtml" />
+    <Content Include="Views\NbarProtocols\Delete.cshtml" />
+    <Content Include="Views\NbarProtocols\Details.cshtml" />
+    <Content Include="Views\NbarProtocols\Edit.cshtml" />
+    <Content Include="Views\NbarProtocols\Index.cshtml" />
+    <Content Include="Views\Routers\Create.cshtml" />
+    <Content Include="Views\Routers\Delete.cshtml" />
+    <Content Include="Views\Routers\Details.cshtml" />
+    <Content Include="Views\Routers\Edit.cshtml" />
+    <Content Include="Views\Routers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
