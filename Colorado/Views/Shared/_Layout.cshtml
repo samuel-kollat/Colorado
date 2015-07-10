@@ -23,9 +23,31 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Applications", "Index", "Applications")</li>
                     <li>@Html.ActionLink("Analyzers", "Index", "Analyzers")</li>
-                    <li>@Html.ActionLink("Certificates", "Index", "Certificates")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Filtering<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Filters</a></li>
+                            <li><a href="#">ACLs</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Network<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Routers</a></li>
+                            <li><a href="#">Interfaces</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Other<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Certificates", "Index", "Certificates")</li>
+                            <li><a href="#">NBAR Protocols</a></li>
+                        </ul>
+                    </li>
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
