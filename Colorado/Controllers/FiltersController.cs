@@ -12,9 +12,15 @@ namespace Colorado.Controllers
         private ColoradoContext db = new ColoradoContext();
 
         // GET: Filters
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
             var filters = db.Filters.Include(f => f.Application).Include(f => f.NbarProtocols);
+
+            if (id != null)
+            {
+                filters = filters.Where(f => f.application_id == id.Value);
+            }
+
             return View(filters.ToList());
         }
 

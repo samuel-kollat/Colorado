@@ -303,6 +303,7 @@
     <Content Include="Views\FilterHasNbarProtocols\Index.cshtml" />
     <Content Include="Views\FilterHasNbarProtocols\Delete.cshtml" />
     <Content Include="Views\FilterHasNbarProtocols\Create.cshtml" />
+    <Content Include="Views\analyzers\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

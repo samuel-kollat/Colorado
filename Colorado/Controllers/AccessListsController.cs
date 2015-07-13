@@ -11,9 +11,13 @@ namespace Colorado.Controllers
         private ColoradoContext db = new ColoradoContext();
 
         // GET: AccessLists
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
             var accessLists = db.AccessLists.Include(a => a.Filter).Include(a => a.IpDestination).Include(a => a.IpSource).Include(a => a.PortDestination).Include(a => a.PortSource);
+            if (id.HasValue)
+            {
+                accessLists = accessLists.Where(a => a.filter_id == id.Value);
+            }
             return View(accessLists.ToList());
         }
 
