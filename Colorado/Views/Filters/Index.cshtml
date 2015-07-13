@@ -20,6 +20,9 @@
         <th>
             @Html.DisplayNameFor(model => model.type)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbarProtocols)
+        </th>
         <th></th>
     </tr>
 
@@ -33,6 +36,13 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @foreach (var proto in item.NbarProtocols)
+            {
+                @Html.DisplayFor(modelItem => proto.NbarProtocol.protocol_name)
+                <br/>
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

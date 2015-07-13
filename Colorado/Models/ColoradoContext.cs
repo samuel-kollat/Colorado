@@ -25,6 +25,13 @@ namespace Colorado.Models
         public DbSet<Filter> Filters { get; set; }
         public DbSet<IpNetwork> IpNetworks { get; set; }
         public DbSet<AccessList> AccessLists { get; set; }
-    
+        public DbSet<FilterHasNbarProtocol> FilterHasNbarProtocols { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<FilterHasNbarProtocol>().HasKey(t => new { t.filter_id, t.nbar_protocol_id });
+        }
     }
 }

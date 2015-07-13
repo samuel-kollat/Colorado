@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,5 +22,7 @@ namespace Colorado.Models
         public int application_id { get; set; }
         public Application Application { get; set; }
 
+        [DisplayName("NBAR")]
+        public virtual ICollection<FilterHasNbarProtocol> NbarProtocols { get; set; }
     }
 }

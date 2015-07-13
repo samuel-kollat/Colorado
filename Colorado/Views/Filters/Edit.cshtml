@@ -43,7 +43,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default"/>
+            </div>
+        </div>
+
+        <div>
+            <div class="col-md-2 text-right"><strong>NBAR</strong></div>
+            <div class="col-md-10">
+                @Html.ActionLink("Change NBAR protocols", "Index", "FilterHasNbarProtocols", new { id = Model.id }, new {})
             </div>
         </div>
     </div>

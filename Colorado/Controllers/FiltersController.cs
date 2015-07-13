@@ -14,7 +14,7 @@ namespace Colorado.Controllers
         // GET: Filters
         public ActionResult Index()
         {
-            var filters = db.Filters.Include(f => f.Application);
+            var filters = db.Filters.Include(f => f.Application).Include(f => f.NbarProtocols);
             return View(filters.ToList());
         }
 
