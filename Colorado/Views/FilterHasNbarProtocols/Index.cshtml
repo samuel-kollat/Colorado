@@ -23,10 +23,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Filter.name)
+            @Html.ActionLink(item.Filter.name, "Index", "Filters", new { id = item.Filter.id }, new {})
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.NbarProtocol.protocol_name)
+            @Html.ActionLink(item.NbarProtocol.protocol_name, "Edit", "NbarProtocols", new {id = item.NbarProtocol.id}, new {})
         </td>
         <td>
             @Html.ActionLink("Delete", "Delete", new { filterId = item.filter_id, nbarId = item.nbar_protocol_id })

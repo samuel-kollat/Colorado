@@ -191,6 +191,7 @@
     <Compile Include="Models\Application.cs" />
     <Compile Include="Models\Certificate.cs" />
     <Compile Include="Models\ColoradoContext.cs" />
+    <Compile Include="Models\DnsAnalyzerData.cs" />
     <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\FilterHasNbarProtocol.cs" />
     <Compile Include="Models\IdentityModels.cs" />
