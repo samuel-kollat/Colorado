@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -39,11 +40,27 @@ namespace Colorado.Controllers
         // GET: AccessLists/Create
         public ActionResult Create()
         {
+            var ipAddresses = db.IpNetworks.ToList().Select(
+                s => new
+                {
+                    IpId = s.id,
+                    IpAddress = s.address + " (" + s.mask + ")"
+                });
+
+            var ports = db.Ports.ToList().Select(
+                s => new
+                {
+                    PortId = s.id,
+                    PortRange = s.greater_or_equal + "-" + s.less_or_equal
+                });
+
             ViewBag.filter_id = new SelectList(db.Filters, "id", "name");
-            ViewBag.ip_destination = new SelectList(db.IpNetworks, "id", "address");
-            ViewBag.ip_source = new SelectList(db.IpNetworks, "id", "address");
-            ViewBag.pn_destination = new SelectList(db.Ports, "id", "id");
-            ViewBag.pn_source = new SelectList(db.Ports, "id", "id");
+            var ipEnum = ipAddresses as IList ?? ipAddresses.ToList();
+            ViewBag.ip_destination = new SelectList(ipEnum, "IpId", "IpAddress");
+            ViewBag.ip_source = new SelectList(ipEnum, "IpId", "IpAddress");
+            var portsEnum = ports as IList ?? ports.ToList();
+            ViewBag.pn_destination = new SelectList(portsEnum, "PortId", "PortRange");
+            ViewBag.pn_source = new SelectList(portsEnum, "PortId", "PortRange");
             return View();
         }
 

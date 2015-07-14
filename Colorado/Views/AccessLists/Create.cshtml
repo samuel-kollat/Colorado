@@ -48,42 +48,57 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ip_source, "ip_source", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ip_source", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ip_source, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.ip_source, "Source IP", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownList("ip_source", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.ip_source, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-md-6" style="padding-top: 7px;">
+                @Html.ActionLink("Create new", "Create", "IpNetworks")
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ip_destination, "ip_destination", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("ip_destination", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.ip_destination, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.ip_destination, "Destination IP", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownList("ip_destination", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.ip_destination, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-md-6" style="padding-top: 7px;">
+                @Html.ActionLink("Create new", "Create", "IpNetworks")
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pn_source, "pn_source", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("pn_source", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.pn_source, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.pn_source, "Source port", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownList("pn_source", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.pn_source, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-md-6" style="padding-top: 7px;">
+                @Html.ActionLink("Create new", "Create", "Ports")
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.pn_destination, "pn_destination", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("pn_destination", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.pn_destination, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.pn_destination, "Destination port", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownList("pn_destination", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.pn_destination, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-md-6" style="padding-top: 7px;">
+                @Html.ActionLink("Create new", "Create", "Ports")
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.filter_id, "filter_id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("filter_id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.filter_id, "", new { @class = "text-danger" })
+            @Html.LabelFor(model => model.filter_id, "Filter", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.DropDownList("filter_id", null, htmlAttributes: new {@class = "form-control"})
+                @Html.ValidationMessageFor(model => model.filter_id, "", new {@class = "text-danger"})
+            </div>
+            <div class="col-md-6" style="padding-top: 7px;">
+                @Html.ActionLink("Create new", "Create", "Filters")
             </div>
         </div>
 
