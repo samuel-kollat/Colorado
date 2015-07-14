@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Colorado.Models.DnsTrackedDomain>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tracked Domains</h2>
+
+<p>
+    @Html.ActionLink("Add Domain", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DomainExpression)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DomainStatus)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DomainExpression)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DomainStatus)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.Id}) |
+                @Html.ActionLink("Details", "Details", new {id = item.Id}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Back to Dashboard", "Index", "DnsAnalyzerDatas")

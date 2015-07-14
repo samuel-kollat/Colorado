@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Colorado.Models.DnsAnalyzerData>
+﻿@model IEnumerable<Colorado.ViewModels.DnsLookUp>
 
 @{
     ViewBag.Title = "Index";
@@ -6,53 +6,61 @@
 
 <h2>DNS Look-Ups</h2>
 
+@Html.ActionLink("Tracked Domains", "Index", "DnsTrackedDomains")
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.SrcIp)
+            @Html.DisplayNameFor(model => model.Data.SrcIp)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DstIp)
+            @Html.DisplayNameFor(model => model.Data.DstIp)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SrcPort)
+            @Html.DisplayNameFor(model => model.Data.SrcPort)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DstPort)
+            @Html.DisplayNameFor(model => model.Data.DstPort)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DomainName)
+            @Html.DisplayNameFor(model => model.Data.DomainName)
         </th>
         <th>
             Addresses
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.SrcIp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DstIp)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SrcPort)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DstPort)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DomainName)
-        </td>
-        <td>
-            @foreach (var addr in item.ResponseAddresses)
-            {
-                @Html.DisplayFor(modelItem => addr.IpAddress)
-                <br/>
-            }
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr @if (true) { <text> style="background-color:@item.CssBgCollor;" </text>  }>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data.SrcIp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data.DstIp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data.SrcPort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data.DstPort)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Data.DomainName)
+            </td>
+            <td>
+                @foreach (var addr in item.Data.ResponseAddresses)
+                {
+                    @Html.DisplayFor(modelItem => addr.IpAddress)
+                    <br/>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+        </tr>
+    }
 </table>

@@ -176,6 +176,7 @@
     <Compile Include="Controllers\CertificatesController.cs" />
     <Compile Include="Controllers\DashboardsController.cs" />
     <Compile Include="Controllers\DnsAnalyzerDatasController.cs" />
+    <Compile Include="Controllers\DnsTrackedDomainsController.cs" />
     <Compile Include="Controllers\FilterHasNbarProtocolsController.cs" />
     <Compile Include="Controllers\FiltersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -206,6 +207,7 @@
     <Compile Include="Models\Router.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\DnsLookUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -311,6 +313,11 @@
     <Content Include="Views\analyzers\Details.cshtml" />
     <Content Include="Views\DnsAnalyzerDatas\Index.cshtml" />
     <Content Include="Views\Dashboards\Index.cshtml" />
+    <Content Include="Views\DnsTrackedDomains\Create.cshtml" />
+    <Content Include="Views\DnsTrackedDomains\Delete.cshtml" />
+    <Content Include="Views\DnsTrackedDomains\Details.cshtml" />
+    <Content Include="Views\DnsTrackedDomains\Edit.cshtml" />
+    <Content Include="Views\DnsTrackedDomains\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
