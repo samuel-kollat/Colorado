@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Colorado.Models.DnsAnalyzerData>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>DNS Look-Ups</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SrcIp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DstIp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SrcPort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DstPort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DomainName)
+        </th>
+        <th>
+            Addresses
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SrcIp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DstIp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SrcPort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DstPort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DomainName)
+        </td>
+        <td>
+            @foreach (var addr in item.ResponseAddresses)
+            {
+                @Html.DisplayFor(modelItem => addr.IpAddress)
+                <br/>
+            }
+        </td>
+    </tr>
+}
+
+</table>

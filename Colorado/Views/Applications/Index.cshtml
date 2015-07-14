@@ -35,13 +35,13 @@
             @Html.DisplayFor(modelItem => item.name)
         </td>
         <td>
-            @Html.ActionLink(item.Analyzer.name, "Details", "Analyzers", new { id = item.Analyzer.id}, new {})
+            @Html.ActionLink(item.Analyzer.name, "Details", "Analyzers", new {id = item.Analyzer.id}, new {})
         </td>
         <td>
             @Html.ActionLink(item.Certificate.name, "Details", "Certificates", new {id = item.Certificate.id}, new {})
         </td>
         <td>
-            @Html.ActionLink("Show", "Index", "Filters", new { id = item.id }, new { })
+            @Html.ActionLink("Show", "Index", "Filters", new {id = item.id}, new {})
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.active_flag)
