@@ -6,6 +6,8 @@
 
 <h2>Tracked Domains</h2>
 
+@Html.Partial("_DnsSubMenu")
+
 <p>
     @Html.ActionLink("Add Domain", "Create")
 </p>
@@ -38,5 +40,3 @@
     }
 
 </table>
-
-@Html.ActionLink("Back to Dashboard", "Index", "DnsAnalyzerDatas")

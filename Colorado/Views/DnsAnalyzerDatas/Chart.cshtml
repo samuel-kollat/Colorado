@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Chart";
+}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load("visualization", "1", { packages: ["corechart"] });
+</script>
+
+<script type="text/javascript">
+
+    function drawVisualization() {
+        $.get('ChartDataJsonResult', {}, function(data) {
+            var tdata = new google.visualization.DataTable();
+
+            tdata.addColumn('string', 'Domain');
+            tdata.addColumn('number', 'Count');
+
+            for (var i = 0; i < data.length; i++) {
+                tdata.addRow([data[i].Domain, data[i].Count]);
+            }
+
+            // Create and draw the visualization.
+            new google.visualization.BarChart(document.getElementById('chartdiv')).
+                draw(tdata, { title: "DNS Look-Ups per domain" });
+
+
+        });
+    };
+
+    google.setOnLoadCallback(drawVisualization);
+
+</script>
+
+<h2>Chart</h2>
+
+@Html.Partial("_DnsSubMenu")
+
+<div id="chartdiv" style="height: 500px; width: 80%">
+</div>  
+

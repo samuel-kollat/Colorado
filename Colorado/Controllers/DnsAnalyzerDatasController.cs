@@ -62,5 +62,26 @@ namespace Colorado.Controllers
 
             return View(lookUps);
         }
+
+        public ActionResult Chart()
+        {
+            return View();
+        }
+
+        public JsonResult ChartDataJsonResult()
+        {
+            var dbData = db.DnsAnalyzerDatas
+                .GroupBy(d => d.DomainName)
+                .Select(group => new
+                {
+                    Domain = group.Key,
+                    Count = group.Count()
+                })
+                .OrderByDescending(s => s.Count);
+
+
+            var json = Json(dbData.ToList(), JsonRequestBehavior.AllowGet);
+            return json;
+        }
     }
 }

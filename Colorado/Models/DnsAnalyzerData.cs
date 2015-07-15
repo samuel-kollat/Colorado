@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -28,6 +29,10 @@ namespace Colorado.Models
         [Required]
         [DisplayName("Domain Name")]
         public string DomainName { get; set; }
+
+        [Required]
+        [DisplayName("Time")]
+        public DateTime DateTime { get; set; }
 
         public virtual ICollection<DnsResponseAddress> ResponseAddresses { get; set; }
     }
