@@ -180,6 +180,7 @@
     <Compile Include="Controllers\FilterHasNbarProtocolsController.cs" />
     <Compile Include="Controllers\FiltersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HttpAnalyzerDatasController.cs" />
     <Compile Include="Controllers\IpNetworksController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NbarProtocolsController.cs" />
@@ -199,6 +200,7 @@
     <Compile Include="Models\DnsAnalyzerData.cs" />
     <Compile Include="Models\Filter.cs" />
     <Compile Include="Models\FilterHasNbarProtocol.cs" />
+    <Compile Include="Models\HttpAnalyzerData.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IpNetwork.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -320,6 +322,9 @@
     <Content Include="Views\DnsTrackedDomains\Index.cshtml" />
     <Content Include="Views\DnsAnalyzerDatas\Chart.cshtml" />
     <Content Include="Views\Shared\_DnsSubMenu.cshtml" />
+    <Content Include="Views\HttpAnalyzerDatas\Index.cshtml" />
+    <Content Include="Views\HttpAnalyzerDatas\Chart.cshtml" />
+    <Content Include="Views\Shared\_HttpSubMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

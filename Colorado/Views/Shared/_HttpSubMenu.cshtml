@@ -1,0 +1,11 @@
+﻿<!-- Split button -->
+<div class="btn-group" style="margin: 1.5em 0;">
+    <button type="button" class="btn btn-primary">@Html.ActionLink("Table", "Index", "HttpAnalyzerDatas", new { }, new { style = "color: white; text-decoration-underline: none;" })</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li>@Html.ActionLink("Chart", "Chart", "HttpAnalyzerDatas")</li>
+    </ul>
+</div>

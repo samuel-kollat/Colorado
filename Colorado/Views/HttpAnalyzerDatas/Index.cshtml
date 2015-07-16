@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Colorado.Models.HttpAnalyzerData>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>HTTP Traffic</h2>
+
+@Html.Partial("_HttpSubMenu") 
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SourceIp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DestinationIp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Method)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SourceIp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DestinationIp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Method)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+    </tr>
+}
+
+</table>

@@ -13,5 +13,6 @@ namespace Colorado.Models
         public DbSet<DnsAnalyzerData> DnsAnalyzerDatas { get; set; }
         public DbSet<DnsResponseAddress> DnsResponseAddresses { get; set; }
         public DbSet<DnsTrackedDomain> DnsTrackedDomains { get; set; }
+        public DbSet<HttpAnalyzerData> HttpAnalyzerDatas { get; set; }
     }
 }
