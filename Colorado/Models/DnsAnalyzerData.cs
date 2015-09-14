@@ -32,7 +32,7 @@ namespace Colorado.Models
 
         [Required]
         [DisplayName("Time")]
-        public DateTime DateTime { get; set; }
+        public DateTime? DateTime { get; set; }
 
         public virtual ICollection<DnsResponseAddress> ResponseAddresses { get; set; }
     }
